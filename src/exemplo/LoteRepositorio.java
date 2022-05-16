@@ -1,6 +1,8 @@
 package exemplo;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,14 +12,15 @@ public class LoteRepositorio {
         lotes.put(lote.getId(), lote);
         return lote.getId();
     }
-    public Arrays getProdutos() {
-        return (Arrays) Arrays.asList(lotes);
+    public Collection<Lote> getLotes() {
+        return lotes.values();
     }
-    public Lote getProduto(String id) {
+    public Lote getLotes(String id) {
         return lotes.get(id);
     }
+    
     public void updateProduto() {
-        
+                
     }
     public void deleteProduto(String id) {
         lotes.remove(id);
